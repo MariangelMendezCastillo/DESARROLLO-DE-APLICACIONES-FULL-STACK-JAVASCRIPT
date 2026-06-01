@@ -1,48 +1,76 @@
 body {
-    background-color: #F8BBD0; /* Rosa pastel */
-    color: #7E57C2; /* Morado */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9; 
+}
+ul li a {
+  text-decoration: none;   
+  color: #0D47A1;          
+  font-weight: bold;       
 }
 
-header {
-    background-color: #7E57C2; /* Morado */
-    color: #FFFFFF; /* Blanco */
-    text-align: center;
-    padding: 20px;
-    font-size: 36px;
-    border-bottom: 4px solid #FFD700; /* Dorado */
+ul li a:hover {
+  color: #FFD700;          /* dorado al pasar el mouse */
+  text-decoration: underline;
 }
 
-h2, h3 {
-    color: #7E57C2; /* Morado */
-    text-align: center;
+/* Mobile First: todo en una columna */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
-button, a {
-    background-color: #FFD700; /* Dorado */
-    color: #7E57C2; /* Morado */
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
+/* Contenido principal */
+.contenido h2 {
+  color: #0D47A1; /* azul corporativo */
+  border-bottom: 2px solid #FFD700; /* línea dorada */
+  padding-bottom: 5px;
 }
 
-button:hover, a:hover {
-    background-color: #7E57C2; /* Morado */
-    color: #FFFFFF; /* Blanco */
+/* Sidebar */
+.sidebar {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 3px solid #1A237E; /* línea azul marino */
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+/* Footer compacto */
 footer {
-    background-color: #7E57C2; /* Morado */
-    color: #FFFFFF; /* Blanco */
-    text-align: center;
-    margin-top: 20px;
+  background-color: #1A237E; /* azul marino */
+  color: #FFD700;           /* dorado */
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
 }
-img{
-    width: 400px;
-    height: 300px;
-    margin:auto
+
+/* Tablet */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 2fr 1fr; /* contenido + sidebar */
+  }
+  footer {
+    font-size: 15px;
+  }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 3fr 1fr; /* más espacio para contenido */
+  }
+  footer {
+    font-size: 16px;
+    padding: 10px;
+  }
 }
