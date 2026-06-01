@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cálculadora de IVA</title>
+        <script src="./js/jquery-4.0.0.min.js"></script>
+
+         <style>
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 30px;
+            background-color: rgb(239, 245, 245);
+             }
+         </style>
+    </head>
+    <h1>Calcula el IVA</h1>
+        <div>
+        <label> Ingrese el monto en pesos </label><input type="number" placeholder="Ingrese el monto" id="monto">
+        <span id="IVA"></span>
+        </div>
+        <br>
+        <button id="btnresultado">IVA</button>
+
+        <script>
+            $("#btnresultado").click(
+                function(){
+                    let monto=$("#monto").val();
+                   
+                    //Realizo la operación aritmética
+                    let resultado = Number(monto) * "0.19";
+
+
+                    
+                    $("#IVA").text("El IVA es de"+ resultado);
+                }
+            );
+
+        </script>
+    </body>
+    </html>
+
+
+
+</html>

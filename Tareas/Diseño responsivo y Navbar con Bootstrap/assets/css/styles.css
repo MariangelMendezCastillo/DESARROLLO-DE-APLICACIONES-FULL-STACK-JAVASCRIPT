@@ -1,0 +1,48 @@
+body {
+    background-color: #F8BBD0; /* Rosa pastel */
+    color: #7E57C2; /* Morado */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #7E57C2; /* Morado */
+    color: #FFFFFF; /* Blanco */
+    text-align: center;
+    padding: 20px;
+    font-size: 36px;
+    border-bottom: 4px solid #FFD700; /* Dorado */
+}
+
+h2, h3 {
+    color: #7E57C2; /* Morado */
+    text-align: center;
+}
+
+button, a {
+    background-color: #FFD700; /* Dorado */
+    color: #7E57C2; /* Morado */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+button:hover, a:hover {
+    background-color: #7E57C2; /* Morado */
+    color: #FFFFFF; /* Blanco */
+}
+
+footer {
+    background-color: #7E57C2; /* Morado */
+    color: #FFFFFF; /* Blanco */
+    text-align: center;
+    margin-top: 20px;
+}
+img{
+    width: 400px;
+    height: 300px;
+    margin:auto
+}

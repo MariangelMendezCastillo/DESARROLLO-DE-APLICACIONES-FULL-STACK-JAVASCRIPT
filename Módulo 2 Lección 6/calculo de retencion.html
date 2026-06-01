@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cálculadora de retención</title>
+        <script src="./js/jquery-4.0.0.min.js"></script>
+
+         <style>
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 30px;
+            background-color: rgb(239, 245, 245);
+             }
+         </style>
+    </head>
+    <h1>Calcula el % de retencion de boleta</h1>
+        <div>
+        <label> Ingrese el monto líquido de su boleta </label><input type="number" placeholder="Ingrese el monto" id="monto">
+        <span id="retencion"></span>
+        </div>
+        <br>
+        <button id="btnresultado">Calcular Retención</button>
+
+        <script>
+            $("#btnresultado").click(
+                function(){
+                    let monto=$("#monto").val();
+                   
+                    //Realizo la operación aritmética
+                    let resultado = (Number(monto) / "0.8475") - Number(monto);
+
+
+                    
+                    $("#retencion").text("La retención de su boleta es de "+ resultado.toFixed(2));
+                }
+            );
+
+        </script>
+    </body>
+    </html>
+
+
+
+</html>

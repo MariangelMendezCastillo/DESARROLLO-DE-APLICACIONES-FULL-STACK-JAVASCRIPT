@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Prácticar operaciones aritmétcas</title>
+        <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 30px;
+            background-color: rgb(239, 245, 245);
+            
+        }
+
+        input {
+            width: 100px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        .resultado {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
+        
+    </head>
+    <body>
+        <h1>Operaciones aritméticas básicas</h1>
+        <div>
+        <input type="number" placeholder="Ingrese el primer número" id="número1">
+        <input type="number" placeholder="Ingrese el segundo número" id="número2">
+        <p id="resultado"></p>
+        </div>
+        <br>
+        <button onclick="sumar();">Sumar</button>
+        <br>
+        <button onclick="restar();">Restar</button>
+        <br>
+        <button onclick="multiplicar();">Multiplicar</button>
+         <br>
+        <button onclick="dividir();">Dividir</button>
+        
+        <script>
+            function sumar() {
+                //Recupero los datos de los input
+                let número_1 = document.getElementById("número1").value;
+                let número_2 = document.getElementById("número2").value;
+                //Realizo la opeación aritmetica
+                let resultado = Number(número_1) + Number(número_2);
+                /*let caja_resultado = document.getElementById("resultado");
+                caja_resultado.value = resultado;*/
+                document.getElementById("resultado").innerText = resultado;
+                //Muestro el resultado
+                //alert(resultado);            
+            }
+            function restar() {
+                
+                 //Recupero los datos de los input
+                let número_1 = document.getElementById("número1").value;
+                let número_2 = document.getElementById("número2").value;
+                //Realizo la opeación aritmetica
+                let resultado = Number(número_1) - Number(número_2);
+                /*let caja_resultado = document.getElementById("resultado");
+                caja_resultado.value = resultado;*/
+                document.getElementById("resultado").innerText = resultado;
+                //Muestro el resultado
+                //alert(resultado);          
+            }
+            function multiplicar() {
+                
+                //Recupero los datos de los input
+                let número_1 = document.getElementById("número1").value;
+                let número_2 = document.getElementById("número2").value;
+                //Realizo la opeación aritmetica
+                let resultado = Number(número_1) * Number(número_2);
+                /*let caja_resultado = document.getElementById("resultado");
+                caja_resultado.value = resultado;*/
+                document.getElementById("resultado").innerText = resultado;
+                //Muestro el resultado
+                //alert(resultado);          
+            }
+            function dividir() {
+                
+                //Recupero los datos de los input
+                let número_1 = document.getElementById("número1").value;
+                let número_2 = document.getElementById("número2").value;
+                //Realizo la opeación aritmetica
+                let resultado = Number(número_1) / Number(número_2);
+                /*let caja_resultado = document.getElementById("resultado");
+                caja_resultado.value = resultado;*/
+                document.getElementById("resultado").innerText = resultado;
+                //Muestro el resultado
+                //alert(resultado);          
+            }
+        </script>
+    </body>
+</html>

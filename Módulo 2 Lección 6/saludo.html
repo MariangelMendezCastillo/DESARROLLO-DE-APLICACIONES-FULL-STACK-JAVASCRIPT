@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Saludo usuario</title>
+        <script src="./js/jquery-4.0.0.min.js"></script>
+
+         <style>
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 30px;
+            background-color: rgb(239, 245, 245);
+             }
+         </style>
+    </head>
+    <h1>Saludo</h1>
+        <div>
+        <label> Ingrese su nombre </label><input type="text" placeholder="Ingrese su nombre" id="nombre">
+        <span id="mensaje"></span>
+        </div>
+        <br>
+        <button id="btnsaludo">Saludar</button>
+
+        <script>
+            $("#btnsaludo").click(
+                function(){
+                    let nombre=$("#nombre").val();
+                    
+                    $("#mensaje").text("Hola "+ nombre  +  "   bienvenid@");
+                }
+            );
+
+        </script>
+    </body>
+    </html>
+
+
+
+</html>
