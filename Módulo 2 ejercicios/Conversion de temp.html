@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de temperatura</title>
+    <style>
+        body {
+            margin-top: 0;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="bg-primary text-white py-4 shadow-sm">
+            <div class="container">
+                <h1 class="mb-0 fw-semibold text-center">Calculadora de temperatura</h1>
+            </div>
+         </div>
+    </header>
+
+    
+    <main class="container-fluid">
+        <div class="row">
+            <!-- Sidebar a la izquierda -->
+            <aside class="col-md-3 col-lg-2">
+                <nav class="bg-light border-end min-vh-100 p-3">
+                    <h6 class="text-uppercase text-secondary mb-3">Menú</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ayuda">Ayuda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Contenido principal a la derecha -->
+            <section class="col-md-9 col-lg-10 py-4">
+                <div class="row g-4">
+                    <!-- Tarjeta 1: Celsius -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body bg-primary">
+                                <h5 class="card-title text-center">Celsius a Farenheit/Kelvin</h5>
+                                <div class="mb-3">
+                                    <label class="form-label">Temperatura en °C:</label>
+                                    <input type="number" id="tempC" class="form-control" placeholder="Ingrese °C">
+                                </div>
+                                <div class="alert alert-light border mb-2">
+                                    <strong>Resultado en °F:</strong> <span id="resultadoF"></span>
+                                </div>
+                                <div class="alert alert-light border mb-2">
+                                    <strong>Resultado en K:</strong> <span id="resultadoK"></span>
+                                </div>
+                                <button class="btn btn-light w-100" onclick="convertirC();">Calcular</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Fahrenheit -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body bg-primary">
+                                <h5 class="card-title text-center">Fahrenheit a Celsius</h5>
+                                <div class="mb-3">
+                                    <label class="form-label">Temperatura en °F:</label>
+                                    <input type="number" id="tempF" class="form-control" placeholder="Ingrese °F">
+                                </div>
+                                <div class="alert alert-light border mb-2">
+                                    <strong>Resultado en °C:</strong> <span id="resultadoCfromF"></span>
+                                </div>
+                                <button class="btn btn-light w-100" onclick="convertirF();">Calcular</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Kelvin -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body bg-primary">
+                                <h5 class="card-title text-center">Kelvin a Celsius</h5>
+                                <div class="mb-3">
+                                    <label class="form-label">Temperatura en K:</label>
+                                    <input type="number" id="tempK" class="form-control" placeholder="Ingrese K">
+                                </div>
+                                <div class="alert alert-light border mb-2">
+                                    <strong>Resultado en °C:</strong> <span id="resultadoCfromK"></span>
+                                </div>
+                                <button class="btn btn-light w-100" onclick="convertirK();">Calcular</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="bg-dark text-light py-3 mt-4">
+            <div class="container text-center">
+                <p class="mb-0">Desarrollado por Zoekstillo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        function convertirC() {
+            const c = Number(document.getElementById("tempC").value);
+            if (!isNaN(c)) {
+                document.getElementById("resultadoF").textContent = ((c * 1.8) + 32).toFixed(2);
+                document.getElementById("resultadoK").textContent = (c + 273.15).toFixed(2);
+            }
+        }
+
+        function convertirF() {
+            const f = Number(document.getElementById("tempF").value);
+            if (!isNaN(f)) {
+                const c = (f - 32) / 1.8;
+                document.getElementById("resultadoCfromF").textContent = c.toFixed(2);
+            }
+        }
+
+        function convertirK() {
+            const k = Number(document.getElementById("tempK").value);
+            if (!isNaN(k)) {
+                const c = k - 273.15;
+                document.getElementById("resultadoCfromK").textContent = c.toFixed(2);
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

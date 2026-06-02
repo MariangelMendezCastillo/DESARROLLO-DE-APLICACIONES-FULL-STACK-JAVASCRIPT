@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio de profundización</title>
+       
+        <style>
+            body {
+                margin-top: 0;
+            }
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="bg-primary text-white py-4 shadow-sm">
+                <div class="container">
+                    <h1 class="h3 mb-0 fw-semibold text-center">Calculadoras</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row g-0">
+                <aside class="col-md-3 col-lg-2">
+                    <nav class="bg-light border-end min-vh-100 p-3">
+                        <h6 class="text-uppercase text-secondary mb-3">Menú</h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link active">Calculadora básica</a></li>
+                            <li class="nav-item">
+                                <a href="./Conversion de temp.html" class="nav-link">Calculadora de temperatura</a></li>
+                            <li class="nav-item">
+                                <a href="./Acerca de.html" class="nav-link">Acerca de</a></li>    
+                        </ul>
+                    </nav>
+                </aside>
+                <section class="col-md-9 col-lg-10">
+                    <div class="container py-4">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body bg-primary p-4">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Número 1:</label><input type="number" placeholder="Ingrese el primer número" id="numero1" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Número 2:</label><input type="number" placeholder="Ingrese el segundo número" id="numero2"
+                                    class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">
+                                        Operaciones:
+                                    </label>
+                                    <select id="operacion" class="form-select">
+                                        <option value="0">Seleccione una opción</option>
+                                        <option value="1">Sumar</option>
+                                        <option value="2">Restar</option>
+                                        <option value="3">Multiplicar</option>
+                                        <option value="4">Dividir</option>
+                                    </select>
+                                </div>
+                                <div class="alert alert-light border mb-3">
+                                    <strong>Resultado:</strong>
+                                    <span id="resultado"></span>
+                                </div>
+                                <div class="text-end">
+                                    <button class="btn btn-light px-4"
+                                            id="calcular"
+                                            onclick="operacion();">
+                                        Calcular
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="bg-dark text-light py-3 mt-4">
+                <div class="container text-center">
+                    <p class="mb-0">Desarrollado por Zoekstillo</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function operacion() {
+                const numero1 = Number(document.getElementById("numero1").value);
+                const numero2 = Number(document.getElementById("numero2").value);
+                if (document.getElementById("operacion").value == "1"){
+                    resultado = numero1 + numero2;    
+                } else if (document.getElementById("operacion").value == "2") {
+                    resultado = numero1 - numero2;
+                } else if (document.getElementById("operacion").value == "3") {
+                    resultado = numero1 * numero2;
+                } else if (document.getElementById("operacion").value == "4") {
+                    resultado = numero1 / numero2;
+                } else {
+                    resultado = "";
+                }
+               
+                document.getElementById("resultado").textContent = resultado;
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
