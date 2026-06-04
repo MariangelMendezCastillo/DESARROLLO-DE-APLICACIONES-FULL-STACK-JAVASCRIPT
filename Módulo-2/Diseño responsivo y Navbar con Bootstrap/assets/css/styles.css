@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9; 
+}
+ul li a {
+  text-decoration: none;   
+  color: #0D47A1;          
+  font-weight: bold;       
+}
+
+ul li a:hover {
+  color: #FFD700;          /* dorado al pasar el mouse */
+  text-decoration: underline;
+}
+
+/* Mobile First: todo en una columna */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Contenido principal */
+.contenido h2 {
+  color: #0D47A1; /* azul corporativo */
+  border-bottom: 2px solid #FFD700; /* línea dorada */
+  padding-bottom: 5px;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 3px solid #1A237E; /* línea azul marino */
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+/* Footer compacto */
+footer {
+  background-color: #1A237E; /* azul marino */
+  color: #FFD700;           /* dorado */
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 2fr 1fr; /* contenido + sidebar */
+  }
+  footer {
+    font-size: 15px;
+  }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 3fr 1fr; /* más espacio para contenido */
+  }
+  footer {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
