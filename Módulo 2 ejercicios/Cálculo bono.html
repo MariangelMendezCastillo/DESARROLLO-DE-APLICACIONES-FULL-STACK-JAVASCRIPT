@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cálculo bono x carga</title>
+       
+        <style>
+            body {
+                margin-top: 0;
+            }
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="bg-primary text-white py-4 shadow-sm">
+                <div class="container">
+                    <h1 class="h3 mb-0 fw-semibold text-center">Calculadora de bono x carga familiar</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row g-0">
+                <aside class="col-md-3 col-lg-2">
+                    <nav class="bg-light border-end min-vh-100 p-3">
+                        <h6 class="text-uppercase text-secondary mb-3">Menú</h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a href="./index.html" class="nav-link active">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="ayuda">Ayuda</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacto">Contacto</a></li>                        
+                        </ul>
+                    </nav>
+                </aside>
+                <section class="col-md-9 col-lg-10">
+                    <div class="container py-4">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body bg-primary p-4">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Salario:</label><input type="number" placeholder="Ingrese salario del trabajador" id="salario" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Número de cargas:</label><input type="number" placeholder="Ingrese el número de carga" id="carga"
+                                    class="form-control">
+                                </div>
+                                 <div class="text-end">
+                                    <button class="btn btn-light px-4 mb-3"
+                                            id="calcular"
+                                            onclick="operacion();">
+                                        Calcular
+                                    </button>
+                                </div>
+                                <div class="alert alert-light border mb-3">
+                                    <strong>Bono a recibir :</strong>
+                                    <span id="resultado"></span>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="bg-dark text-light py-3 mt-4">
+                <div class="container text-center">
+                    <p class="mb-0">Desarrollado por Zoekstillo</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function operacion() {
+                const salario = Number(document.getElementById("salario").value);
+                const carga = Number(document.getElementById("carga").value);
+                
+                    resultado = (salario * 0.02) * carga;    
+                
+               
+                document.getElementById("resultado").textContent = "$ " + resultado ;
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

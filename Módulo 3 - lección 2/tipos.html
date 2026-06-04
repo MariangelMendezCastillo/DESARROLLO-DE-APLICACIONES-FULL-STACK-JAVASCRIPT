@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo de variables</title>
+    </head>
+    <body>
+        <button onclick="tipos();">Ejecutar</button>
+        <script>
+            // variable con scope global
+               var bebida = "Coca cola";
+
+            function tipos() {
+                // Todas las variables tiene scope local
+
+                var nombre = "Mariangel"; // Tipo String
+                var edad = 40; // Tipo Number
+                var cesante = false; // Tipo Booleam
+
+                // Variable objeto
+
+                var asignatura ={
+                    nombre: "Matemática avanzadas",
+                    nivel: "tercer semestre",
+                    profesor: "Gastón",
+                    codigo: 123,
+                    habilitada: true
+                };
+
+                // Array ( arreglo, lista)
+
+                var trabajadores = [
+                    "María",
+                    "Juan",
+                    "Pedro",
+                    "Luisa",
+                    "Carolina",
+                    "José",   
+                    "Olga"                
+                ];
+
+                console.log("Nombre:  " + nombre);
+                console.log("Edad:  " + edad);
+                console.log("Cesante:  " + cesante);
+
+                console.log("Asigntura:  ");
+                console.log("Nombre:  " + asignatura.nombre);
+                console.log("Nivel:  " + asignatura.nivel);
+                console.log("Profesor:  " + asignatura.profesor);
+                console.log("Código:  " + asignatura.codigo);
+                console.log("Habilitada:  " + asignatura.habilitada);
+
+                console.log("Trabajadores:  " + trabajadores);
+                console.log("Segundo Trabajador:  " + trabajadores[1]);
+
+                // Posición fuera de rango: Undefined
+                // console.log(trabajadores[7]);
+
+                console.log("nombre es tipo:  " + typeof nombre);
+                console.log("edad es tipo:  " + typeof edad);
+                console.log("cesante es tipo:  " + typeof cesante);
+                console.log("asigntura es tipo:  " + typeof asignatura);
+                console.log("trabajadores es tipo:  " + typeof trabajadores);
+
+            }
+        </script>
+    </body>
+</html>
