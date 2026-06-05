@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9; 
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+ul li a {
+  text-decoration: none;   
+  color: #0D47A1;          
+  font-weight: bold;       
+}
+
+ul li a:hover {
+  color: #FFD700;          
+  text-decoration: underline;
+}
+
+#proyectos ul {
+  margin: 15px 0;       /* margen superior e inferior */
+  padding-left: 20px;   /* sangría para la lista */
+}
+
+#proyectos li {
+  margin-bottom: 10px;  /* espacio entre cada ítem */
+  line-height: 1.5;     /* altura de línea para mejor lectura */
+}
+
+#btnTop {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  padding: 10px 14px;
+  color: #FFD700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; /* se controla con JS */
+}
+
+/* Contenido principal */
+.contenido h2 {
+  color: #0D47A1; /* azul corporativo */
+  border-bottom: 2px solid #FFD700; /* línea dorada */
+  padding-bottom: 5px;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 3px solid #1A237E; /* línea azul marino */
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+/* Footer compacto */
+footer {
+  background-color: #1A237E; 
+  color: #FFD700;           
+  text-align: center;
+  padding: 4px 0;   /* menos espacio arriba y abajo */
+  font-size: 12px;  /* texto más pequeño */
+  line-height: 1.2; /* reduce separación entre líneas */
+}
+/* Mobile First: todo en una columna */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 2fr 1fr; /* contenido + sidebar */
+  }
+  footer {
+    font-size: 15px;
+  }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 3fr 1fr; /* más espacio para contenido */
+  }
+  footer {
+  font-size: 14px;
+  padding: 6px 0;
+}
+}
